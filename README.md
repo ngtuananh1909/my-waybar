@@ -55,4 +55,4 @@ killall waybar; waybar &
 
     cava.sh: Script to pipe Cava frequency data to the Waybar module.
 
-    power-cycle.sh: Script to toggle CPU power profiles and send notifications **
+    power-cycle.sh: Script to toggle CPU power profiles and send notifications 
