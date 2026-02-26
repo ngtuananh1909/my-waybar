@@ -1,0 +1,107 @@
+/* Thiết lập font và reset mặc định */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Fira Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* Trong suốt hóa thanh Waybar */
+window#waybar {
+    background-color: transparent;
+}
+
+/* === Định dạng chung cho các "Viên thuốc" === */
+#workspaces, 
+#window, 
+#clock, 
+#hardware, 
+#tray, 
+#battery, 
+#music-visual, /* Nhóm gộp Cava + Nhạc */
+#mode {         /* Nhóm gộp Loa + Độ sáng */
+    background-color: rgba(30, 30, 46, 0.8);
+    border: 2px solid #794a8a;
+    border-radius: 24px;
+    padding: 1px 8px; /* Giảm padding từ 2px 12px xuống 1px 8px */
+    margin: 2px 4px;  /* Giảm margin từ 4px xuống 2px để bar mỏng lại */
+    color: #cba6f7;
+}
+#clock {
+    color: #cba6f7; /* Màu tím pastel cho dịu mắt */
+    padding: 0 10px;
+    font-size: 13px;
+    /* Giữ nguyên viền xanh ngọc bạn đã thiết lập ở bước trước */
+}
+/* === Xử lý bên trong nhóm gộp (Xóa viền/nền lẻ) === */
+#cava, 
+#custom-music, 
+#memory, #cpu, #disk,
+#backlight, #pulseaudio {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0 6px;
+}
+
+/* === Màu sắc đặc trưng cho từng Module === */
+#cava {
+    color: #89b4fa; /* Màu xanh biển cho sóng nhạc */
+    padding-right: 10px;
+}
+
+#custom-music {
+    color: #a6e3a1; /* Màu xanh lá cho tên bài hát */
+}
+
+/* === Trạng thái Pin === */
+#battery.warning {
+    border-color: #f9e2af;
+    color: #f9e2af;
+}
+
+#battery.critical {
+    border-color: #f38ba8;
+    color: #f38ba8;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    to {
+        background-color: #f38ba8;
+        color: #1e1e2e;
+    }
+}
+
+/* === Quản lý Workspaces === */
+#workspaces button {
+    color: #cdd6f4;
+    padding: 0 10px;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    color: #9c9b9a;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button.active {
+    color: #a6e3a1; 
+}
+
+#workspaces button.urgent {
+    color: #f38ba8;
+}
+
+/* === Tùy chỉnh khay hệ thống === */
+#tray {
+    padding: 0 10px;
+}
+#window {
+    padding: 0 10px;
+    margin-right: 0;
+    font-size: 13px; /* Giảm nhẹ font size cho module này */
+}
