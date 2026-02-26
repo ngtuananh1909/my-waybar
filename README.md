@@ -29,7 +29,7 @@ sudo apt update && sudo apt install waybar playerctl cava gsimplecal upower libn
 ```bash
 sudo pacman -S waybar playerctl cava gsimplecal upower libnotify
 ```
-**2. Deploy Configuration
+### 2. Deploy Configuration
 
 Run these commands to apply the configuration to your system:**
 
@@ -44,7 +44,8 @@ chmod +x ~/.config/waybar/*.sh
 
 killall waybar; waybar &
 ```
-**Project Structure
+
+### Project Structure
 
     config.jsonc: Main configuration file (Fixed arg-id for Ubuntu compatibility).
 
@@ -54,4 +55,4 @@ killall waybar; waybar &
 
     cava.sh: Script to pipe Cava frequency data to the Waybar module.
 
-    power-cycle.sh: Script to toggle CPU power profiles and send notifications**
+    power-cycle.sh: Script to toggle CPU power profiles and send notifications **
