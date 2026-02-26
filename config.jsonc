@@ -94,7 +94,7 @@
     "battery": {
         "format": "{capacity}% {icon}",
         "format-icons": ["", "", "", "", ""],
-        "on-click": "bash /home/tuananh/.config/waybar/power-cycle.sh",
+        "on-click": "bash /home/tuananh/.config/waybar/Mode/power-cycle.sh",
         "on-click-right": "wlogout" 
     },
 
@@ -108,14 +108,14 @@
     },
 
     "custom/cava": {
-        "exec": "bash /home/tuananh/.config/waybar/cava.sh",
+        "exec": "bash /home/tuananh/.config/waybar/Mode/cava.sh",
         "format": "{}",
         /* Sóng nhạc chỉ xuất hiện khi trạng thái là Playing */
         "exec-if": "playerctl status 2>/dev/null | grep -q 'Playing'"
     },
 
     "custom/music": {
-        "exec": "bash /home/tuananh/.config/waybar/music.sh",
+        "exec": "bash /home/tuananh/.config/waybar/Mode/music.sh",
         "interval": 2,
         "format": "🎵 {}",
         "on-click": "playerctl previous",
